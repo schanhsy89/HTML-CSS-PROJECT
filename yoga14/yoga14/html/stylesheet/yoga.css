@@ -1,0 +1,284 @@
+/* Sirirath Chanhsy */
+
+/* style config for body of html */
+body{
+     
+	color: #40407A;
+    font-family: Verdana, Ariel, sans-serif;
+    background-color: #3F2860; /* wanting to change "background border type" color modification ?? */
+	margin: 0;
+}
+
+h1{ 
+	color:#e5c8f5;
+}
+
+header{
+	background-image: 
+	url(../stylesheet/CSS_img/sunrise.jpg); /* image link */
+	background-color: #40407A;
+	background-size: 100% 100%;
+	color: white;
+	font-size: 90%;
+	margin-top: 50px;
+	min-height: 200px;
+}
+
+header:link{
+	color: #FFF;
+}
+
+header:visited{
+	color: #FFF;
+}
+
+header:hover{
+	color: #EDF5F5;
+}
+
+nav{
+	width: 100%;
+	padding-top: 0.5em;
+	word-spacing: 8em;
+	
+	padding: 1em; /* MODIFY */
+	position: fixed; 
+	top: 0;
+	left: 0;
+	text-align: right;
+	background-color: white;
+	margin: 0;
+	padding-right: 2em;
+	z-index: 9999;
+
+
+}
+
+
+nav a{
+	/* removal of default underline from navigation */
+	text-decoration: none; 
+	
+	
+	background-color: #F5F5F5;
+}
+
+nav a:link {
+	color:#3F2860;
+}
+
+nav a:visited { 
+	color: #497777;
+}
+
+nav a:hover { 
+	color: #A26100;
+}
+
+.nav ul {
+	list-style-type: none;
+	display: flex;/* try Practive 7.1 or flexwrap w/ row that wraps?? */ 
+	flex-wrap: wrap;
+	flex-direction: row;
+	
+	margin: 0;
+	font-size: 1.2em;
+}
+
+.nav li{
+	width: 40%;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 1em;
+	padding-right: 1em;
+	display: inline;
+}
+
+/* style rule to configure title as a span element (from assignments direction)
+for a style class named "studio" */
+.studio{
+	color: #40407A;
+	font-family: Verdana, Ariel, sans-serif;
+}
+
+/* footer style configuration */
+footer{
+	
+    font-size: .60em;
+    font-style: italic;
+    text-align: center;
+	 /* MODIFY footer padding */
+}
+
+#mobile{
+	display: inline;
+}
+
+#desktop{
+	display: none;
+}
+
+/* style rule named "wrapper" to configure margins and width to page */ 
+#wrapper{
+	
+	background-color: #F5F5F5; /* MODIFY */
+	padding: 2em;
+}
+
+#mathero{ /* id selector named 'mathero' */
+	background-image: url(../htmlimg/yogamat.jpg);
+	background-repeat: no-repeat;
+	height: 300px;
+	background-size: cover;
+	display: none;
+}
+
+#loungehero{ /* id selector styles for html */
+	background-image: url(../htmlimg/yogalounge.jpg);
+	background-repeat: no-repeat;
+	height: 300px;
+	background-size: cover;
+	display: none;
+}
+
+section{
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+* { 
+	box-sizing:border-box;
+}
+
+.one{ /* class selector */
+	float:right;
+	width:60%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.home{
+	height: 20vh;
+	padding-top: 2em;
+	padding-left: 10%;
+}
+
+.content{
+	height: 20vh;
+	padding-top: 2em;
+	padding-left: 10%;
+}
+
+
+table{ /* remember to center in html when added...or not below */
+	width: 60%;    /* center table with given width and margin set to auto */
+	margin: auto;
+	border: 1px #3F2860;
+	border-collapse: collapse;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+td, th{ /* configure td (table data) and th (table header) elements together */
+	padding: 5px;
+	border: 1px #3F2860;
+}
+
+tr:nth-of-type(even){
+	background-color: #DBE8E9;
+}
+
+caption{
+	margin: 1em;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+
+.form{
+	display: flex;
+	columns: 1;
+	padding-left: 1em;
+	width: 80%;
+}
+
+.input, .textarea{
+	margin-bottom: .5em;
+}
+
+.form2{
+	width: 60%;
+	display: grid;
+	grid-gap: 1em;
+	columns: 2;
+	column-width: 12em;
+	column-width: 562px;
+	
+}
+
+input [type = "submit"]{
+	grid-column: 2/2;
+	width: 9em;
+}
+
+.label{
+	text-align: right;
+}
+
+
+
+
+@media (min-width: 600px){ /* media query and styles for medium display */
+	nav ul{
+		display:flex; 
+		flex-direction:row;
+		flex-wrap: nowrap; 
+		justify-content: flex-end;
+	}
+	nav li{
+		width: 7em;
+	}
+	section{
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+	#mathero{
+		display: block;
+		padding-bottom: 1em;
+	}
+	#loungehero{
+		display: block;
+		padding-bottom: 1em;
+	}
+	#flow{
+		display: flex;
+		flex-direction: row;
+	}
+	#mobile{
+		display: none;
+	}
+	#desktop{
+		display: inline;
+	}
+
+}
+
+@media (min-width: 1024px){ /* media query for desktop display with styles and minimum width */
+	header{
+		font-size: 120%;
+	}
+	.home{
+		height: 50vh;
+		padding-top: 5em;
+		padding-left: 8em;
+	}
+	.content{
+		height: 30vh;
+		padding-top: 1em;
+		padding-left: 8em;
+	}
+	#wrapper{
+		margin: auto;
+		width: 80%;
+	}
+}
